@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Phone, Mail } from 'lucide-react'
 import { User } from '@/app/actions/schemas'
+import { UserEditDialog } from './user-edit-dialog'
 import DeleteButton from './delete-button'
 // import { UserEditDialog } from './user-edit-dialog'
 
@@ -44,6 +45,7 @@ export default function UserCard({ user }: UserCardProps) {
       </CardContent>
       <CardFooter className="flex justify-between items-center">
         <DeleteButton userId={user.id} />
+        <UserEditDialog user={{ id: user.id, name: user.name, email: user.email, phoneNumber: user.phoneNumber }} />
         {/* <UserEditDialog user={user} /> */}
       </CardFooter>
     </Card>

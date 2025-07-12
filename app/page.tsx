@@ -2,6 +2,7 @@ import UserSearch from './components/user-search';
 import { TechnicalOverview } from './components/technical-overview';
 import { UserDialog } from './components/user-dialog';
 
+
 export default async function Home({ searchParams }: { searchParams: Promise<{ userId?: string }> }) {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -9,7 +10,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ u
       <UserSearch searchParams={searchParams} />
       <UserDialog />
       <TechnicalOverview />
-
+      {/* Replace the following with a valid User object */}
+      
     </div>
   );
 }
